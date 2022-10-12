@@ -1,0 +1,33 @@
+# Emilie Mancera
+# 404
+
+# On choisi le nombre aléatoire
+import random
+chiffre_ordi = random.randint(0, 1000)
+
+print(chiffre_ordi)
+
+# Introduction du jeu
+def introduction():
+    print("J'ai choisi un nombre aléatoire entre 0 et 1000")
+    print ("À vous de le deviner...")
+introduction()
+nombre_essais = 0
+
+# Essais-erreurs du joueur
+while resultat_joueur != chiffre_ordi:
+    nombre_essais += 1
+
+def resultat_joueur():
+    int(input("Entrez votre essai:"))
+        if resultat_joueur < chiffre_ordi:
+            print("Mauvais choix, le nombre est plus grand que " + resultat_joueur)
+
+        if resultat_joueur() > chiffre_ordi:
+            print("Mauvais choix, le nombre est plus petit que " + resultat_joueur)
+
+        if resultat_joueur() == chiffre_ordi:
+            print("Bravo! Bonne réponse")
+
+
+resultat_joueur()
