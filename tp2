@@ -30,7 +30,7 @@ while essai != x:
         print("Mauvais choix, le nombre est plus petit que " + str(essai))
         str(essai)
 
-    if essai == x: # message de l'orsinateur si le joueur arrive à la bonne réponse
+    if essai == x: # message de l'ordinateur si le joueur arrive à la bonne réponse
         print("Bravo! Bonne réponse")
         print("vous avez réussi en : " + str(nb_essai) + " essais") # On affiche au joueur son nombre d'essais
         quit = input("voulez-vous rejouer? (y/n)") # On demande au joueur s'il veut rejouer
