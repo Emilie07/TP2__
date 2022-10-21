@@ -1,0 +1,50 @@
+# Emilie Mancera
+# 404
+
+# On choisi le nombre aléatoire
+import random
+x = random.randint(0, 1000)
+
+# 1. c
+liste = ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+c = 0
+while c < 10:
+    liste.pop()
+    c += 1
+    print(liste)
+
+
+# Introduction du jeu
+def introduction(): # On définit la fonction "Introduction"
+    print("J'ai choisi un nombre aléatoire entre 0 et 1000")
+    print ("À vous de le deviner...")
+introduction() # On fait jouer la fonction "Introduction"
+
+
+# Essais-erreurs du joueur
+def jeu():
+    essai = 1001
+    nb_essai = 0 # On définit le nombre d'essais à 0 avant que le jeu commence
+    while essai != x:
+        nb_essai += 1 # On ajoute 1 essai à chaque fois que le joueur ne trouve pas la bonne réponse
+        essai = int(input("Entrez votre essai:"))
+
+        # Message de l'ordi quand le joueur entre sa réponse
+        if essai < x: # Message de l'ordinateur si la réponse du joueur est plus petite que le nombre choisi par l'ordinateur
+            print("Mauvais choix, le nombre est plus grand que " + str(essai))
+            str(essai)
+
+        if essai > x: # Message de l'ordinateur si la réponse du joueur est plus grande que le nombre choisi par l'ordinateur
+            print("Mauvais choix, le nombre est plus petit que " + str(essai))
+            str(essai)
+
+        if essai == x: # message de l'ordinateur si le joueur arrive à la bonne réponse
+            print("Bravo! Bonne réponse")
+            print("vous avez réussi en : " + str(nb_essai) + " essais") # On affiche au joueur son nombre d'essais
+            quit = input("voulez-vous rejouer? (y/n)") # On demande au joueur s'il veut rejouer
+            if quit == "n":
+                print("Merci et au revoir")
+                exit() # On termine le code si le joueur ne veut pas rejouer
+            if quit == "y":
+                jeu() # On recommence le code si le joueur veut rejouer
+jeu()
